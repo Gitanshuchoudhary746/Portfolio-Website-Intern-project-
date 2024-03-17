@@ -1,0 +1,121 @@
+@media screen and (max-width: 450px) {
+  .nav .items {
+    margin-left: 50px;
+    position: absolute;
+    left:-110%;
+    top:100%;
+    width: 100%;
+    height: 180px;
+    background-color: rgba(0, 0, 0, 0.436);
+  }
+  .nav .items-after{
+    left: -10%;
+
+  }
+  .nav .items ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .nav .items ul li{
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+  }
+  .icon-res {
+    display: block;
+    font-size: 30px;
+    padding-right: 20px;
+  }
+  #page1{
+    width: 450px;
+  }
+  .maintext {
+    max-width: 450px;
+    font-size: 5rem;
+    text-align: center;
+    height: 200px;
+  }
+  .about {
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+  }
+  .rocket {
+    height: 50vh;
+    transform: translateY(-50px);
+    filter: brightness(40%);
+  }
+  .download{
+    transform: translate(0,0);
+    top:30%;
+  }
+  #page2 {
+    margin-top:20%;
+    padding: 0;
+    flex-direction: column;
+    height: 230vh;
+    width: 450px;
+    align-items: self-start;
+    justify-content: flex-start;
+  }
+  .about-title {
+    padding-left: 100px;
+    margin-bottom: 50px;
+    background: linear-gradient(to right, #8f2ecc 20%, #6b58ff 50%, #8f2ecc);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    z-index: 1;
+  }
+  .about-icon {
+    margin-left: 40px;
+    margin-bottom: 70px;
+  }
+  .about-icon img {
+    width: 350px;
+    height: 350px;
+  }
+  .about-text {
+    width: 400px;
+    margin-left: 20px;
+  }
+  .expertise-title {
+    margin-top: 150px;
+    padding: 40px;
+    background: linear-gradient(to right, #8f2ecc 20%, #6b58ff 50%, #8f2ecc);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    z-index: 1;
+  }
+  .expertise-content {
+    flex-direction: column;
+    width: 100%;
+    margin: 20px;
+  }
+  .expertise-content .content-1 {
+    width: 400px;
+    height: 400px;
+  }
+  .expertise-content .content-2 {
+    width: 400px;
+    height: 400px;
+  }
+
+  #page3 {
+    margin: 0;
+    flex-direction: column;
+    width: 450px;
+    height: 314vh;
+    justify-content: flex-start;
+  }
+  .project-title {
+    padding-left: 100px;
+    background: linear-gradient(to right, #8f2ecc 20%, #6b58ff 50%, #8f2ecc);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    z-index: 1;
+    margin-bottom: 30px;
+  }
+}

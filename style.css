@@ -1,0 +1,536 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: #151516;
+}
+.main {
+  background-color: #151516;
+}
+#page1 {
+  height: 100vh;
+  width: 100%;
+  background-color: #151516;
+  overflow-x: hidden;
+}
+#page2 {
+  height: 200vh;
+  width: 100%;
+  background-color: #151516;
+  overflow-x: hidden;
+}
+#page3 {
+  height: 200vh;
+  width: 100%;
+  background-color: #151516;
+  overflow-x: hidden;
+}
+/*importing font */
+.bebas-neue-regular {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/*page 1*/
+#page1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: linear-gradient( rgba(75, 2, 75, 0.577) ,#151516 ,#151516);
+}
+
+.maintext {
+  color: white;
+  font-family: Bebas Neue;
+  font-size: 7rem;
+  word-spacing: 5px;
+  letter-spacing: 5px;
+  height: 125px;
+  z-index: 1;
+  animation: nav-item-anim 1s;
+}
+.animate {
+  background: linear-gradient(to right, #ccc 50%, #6b58ff 50%, #8f2ecc);
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: 0.5s ease-out;
+  z-index: 1;
+}
+.animate:hover {
+  background-position: -100%;
+  text-shadow: 12px 10px 40px #341f34;
+}
+.about {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  font-weight: 550;
+  word-spacing: 10px;
+  animation: nav-item-anim 1s;
+}
+.rocket {
+  height: 80vh;
+  position: absolute;
+  filter: brightness(50%);
+  animation: rocket-load-anim 1s;
+}
+.download{
+    position: relative;
+    transform: translate(600px,150px);
+    padding: 15px;
+    height: 60px;
+    border-radius: 50px;
+    border: 2px solid rgba(255, 255, 255, 0.326);
+    transition: 500ms;
+}
+.download:hover{
+    background-color:#8f2ecc;
+    border: 2px solid purple;
+}
+.download a{
+    text-decoration: none;
+    color: whitesmoke;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1rem;
+}
+
+/*nav bar*/
+
+.nav {
+  background-color: rgba(36, 1, 36, 0);
+  display: flex;
+  justify-content: space-between;
+  padding-left: 5%;
+  padding-right: 2%;
+  align-items: center;
+  height: 75px;
+  position: fixed;
+  z-index: 99;
+  width: 100%;
+}
+.nav .items {
+  text-transform: capitalize;
+  animation: nav-item-anim 1s;
+  margin-left: 700px;
+}
+.nav .items ul {
+  list-style: none;
+  font-size: 1.1rem;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-weight: 600;
+  color: white;
+}
+.nav .items ul li {
+  display: inline-block;
+  margin-left: 19px;
+}
+.nav .logo {
+  color: white;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 1.5rem;
+  letter-spacing: 3px;
+  font-weight: 700;
+  display: flex;
+  animation: logo-anim 1s;
+}
+.nav .logo .logo1 {
+  margin-left: 1px;
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: purple;
+}
+.nav .logo:hover {
+  color: #8f2ecc;
+  transition: 0.8s;
+}
+.scroll {
+  width: 10vh;
+  z-index: 2;
+  position: absolute;
+  margin-left: 80%;
+  margin-top: 30%;
+  border-radius: 50%;
+}
+.icon-res{
+  display: none;
+}
+
+/*animations*/
+@keyframes logo-anim {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes nav-item-anim {
+  0% {
+    transform: translatey(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes rocket-load-anim {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* about section*/
+.about-title {
+  font-family: Bebas Neue;
+  font-size: 5rem;
+  color: white;
+  text-align: center;
+  margin-right: 80%;
+  padding-left: 40%;
+  margin-bottom: 40px;
+  background: linear-gradient(to right, #ccc 50%, #6b58ff 50%, #8f2ecc);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  z-index: 1;
+}
+.about-icon {
+  overflow: hidden;
+  border-radius: 50%;
+  border: 2px solid purple;
+  box-shadow: 0px 2px 50px purple;
+  transition: 500ms;
+  position: relative;
+}
+.about-icon img {
+  height: 70vh;
+  filter: brightness(70%);
+  max-width: 100%;
+  overflow-x: hidden;
+}
+.about-icon:hover {
+  box-shadow: 0px 2px 100px purple;
+}
+.about-text {
+  width: 45%;
+  color:rgba(255, 255, 255, 0.681);
+  font-size: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.326);
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  border-radius: 50px;
+  transition: 500ms;
+}
+#page2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8rem;
+  margin-top: 50px;
+  flex-wrap: wrap;
+}
+/*experience sextion*/
+.expertise-title{
+    font-family: Bebas Neue;
+  font-size: 5rem;
+  color: white;
+  text-align: center;
+  margin-top: 180px;
+  margin-right: 80%;
+  padding-left: 35%;
+  margin-bottom: 20px;
+  background: linear-gradient(to right, #ccc 50%, #6b58ff 50%, #8f2ecc);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  z-index: 1;
+}
+.expertise-content{
+    width: 80%;
+    height: 300px;
+    display: flex;
+    margin-left: 128px;
+}
+.expertise-content .content-1{
+    width: 50%;
+    height: 100%;
+    border: 3px solid rgba(255, 255, 255, 0.668);
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding-top: 30px;
+    padding-left: 40px;
+}
+.expertise-content .content-2{
+    width: 50%;
+    height: 100%;
+    border: 3px solid rgba(255, 255, 255, 0.668);
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding-top: 30px;
+    padding-left: 40px;
+}
+.expertise-content .content-1 img{
+    height: 50px;
+}
+
+.expertise-content .content-2 img{
+    height: 50px;
+}
+.expertise-content .content-1 .title{
+    color: white;
+    font-size: 27px;
+    width: 70%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-decoration: underline;
+    text-decoration-color: orangered;
+    text-decoration-thickness: 5px;
+}
+.expertise-content .content-2 .title{
+    color: white;
+    font-size: 27px;
+    width: 70%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-decoration: underline;
+    text-decoration-color:blue ;
+    text-decoration-thickness: 5px;
+}
+.expertise-content .content-1 .text{
+    color: white;
+    width: 80%;
+    margin-bottom: 30px;
+    margin-left: 20px;
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 400;
+    border-left: 2px solid rgba(255, 255, 255, 0.488);
+    padding-left: 51px;
+
+}
+.expertise-content .content-2 .text{
+    color: white;
+    width: 80%;
+    margin-bottom: 30px;
+    margin-left: 20px;
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 400;
+    border-left: 2px solid rgba(255, 255, 255, 0.488);
+    padding-left: 51px;
+}
+.h3{
+    width: 100%;
+    height: 20px;
+    color: rgba(255, 255, 255, 0.488);
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-left: 36px;
+    margin-bottom: 10px;
+}
+/*page 3*/
+#page3{
+    display:flex;
+    justify-content: center;
+    width: 100%;
+    justify-content: space-around;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    flex-wrap: wrap;
+    margin-top: 140px;
+    margin-left: 50px;
+}
+.project-title{
+  font-family: Bebas Neue;
+  font-size: 5rem;
+  color: white;
+  text-align: center;
+  margin-right: 80%;
+  padding-left: 1133px;
+  background: linear-gradient(to right, #ccc 50%, #6b58ff 50%, #8f2ecc);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  z-index: 1;
+}
+.card{
+  width: 400px;
+  height: 360px;
+  margin-right: 80px;
+  padding: 2rem 1rem;
+  background-color: black;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  box-shadow: 0px 2px 50px purple;
+  transition: 0.5s ease-in-out;
+  margin-bottom: 100px;
+  border-radius: 50px;
+  filter: brightness(70%);
+  border: 2px solid white;
+  margin-left: 20px;
+}
+.card:hover{
+    transform: translateY(20px);
+}
+.card:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom,rgba(176, 0, 173, 0.5),rgb(175, 61, 201));
+    z-index: 2;
+    transition:0.5s all ;
+    opacity: 0;
+    border-radius: 50px;
+}
+.card:hover:before{
+    opacity: 1;
+}
+.card img{
+    width:100%;
+    height: 100%;
+    object-fit: contain;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50px;
+}
+.card .info{
+    position: relative;
+    z-index: 3;
+    color: #fff;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.5s all;
+}
+.card:hover .info{
+    opacity: 1;
+    transform: translateY(0px);
+}
+.card .info h1{
+    margin: 0;
+}
+.card .info p{
+    letter-spacing: 1px;
+    font-size: 15px;
+    margin-top: 8px;
+    margin-bottom: 20px;
+} 
+.card .info .btn{
+    text-decoration: none;
+    padding: 0.5rem;
+    background:#fff;
+    font-size: 14px;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+    border-radius: 50px;
+}
+.card .info .btn:hover{
+    box-shadow: 0px 7px 10px rgba(0,0,0,0.5);
+
+}
+
+#page4{
+  height: 200vh;
+  width: 100%;
+  background-color: #151516;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#page4 .title{
+  font-family: Bebas Neue;
+  font-size: 5rem;
+  color: white;
+  text-align: center;
+  margin-right: 40%;
+  padding-left: 41%;
+  margin-bottom: 40px;
+  background: linear-gradient(to right, #ccc 50%, #6b58ff 50%, #8f2ecc);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  z-index: 1;
+}
+#page4 .box{
+  height: 100vh;
+  width: 80%;
+  background-color: #fff;
+  display: flex;
+}
+#page4 .box .form{
+  height: 100%;
+  background-color: #151516;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 40px;
+}
+#page4 .box .form div{
+  width: 100%;
+  height: 80px;
+  position: relative;
+  margin-bottom: 40px;
+}
+#page4 .box .form .message{
+  width: 100%;
+  height: 100px;
+  position: relative;
+  margin-bottom: 20px;
+}
+#page4 .box .form .message .text{
+  height: 100%;
+}
+#page4 .box .form div .text{
+  width: 80%;
+  height: 40px;
+  border-radius: 10px;
+  border-color: white;
+  border: none;
+  background-color: #151516;
+  border-bottom: solid #8f2ecc;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+
+#page4 #button{
+  width: 20%;
+  background-color:purple;
+  height: 50px;
+  border-radius: 10px;
+  margin-top: 30px;
+  margin-right: 50px;
+  font-size: 15px;
+  color: black;
+}
+#page4 .box .info{
+  height: 100%;
+  background-color: #341f34;
+  width: 40%;
+}
+
+/*info part
+
